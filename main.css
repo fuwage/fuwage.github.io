@@ -1,21 +1,20 @@
-/*
-svg {
+/*あか　#B5343B
+  ピンク　#EBBAC2
+  しろ　#F1F4F5
+　むらさき　#5B508E
+　みどり　#3C7359
+　きみどり　#83C677*/
 
-display:block;
-width:80%;
-margin:0 auto;
-border:solid 1px;
+* {
+    background-color: #F1F4F5;
 }
 
-image{
-    width: 100%;
+h1 {
+    text-align: center;
+    color: #B5343B;
 }
-*/
 
 
-image{
-    width: 200px;
-}
 
 #kisekae-area {
     border: solid;
@@ -23,32 +22,47 @@ image{
     text-align: center;
     position: relative;
 }
+
+
+
+
 #select-img-area {
     display: -webkit-box;
     display: -ms-flexbox;
+    text-align: center;
+    position: relative;
     display: flex;
 }
+
 .select-img {
-    border: solid 1px #000;
+    border: solid 10px #F1F4F5;
     text-align: center;
     padding: 10px;
     width: 20%;
     margin-right: 5px;
     cursor: pointer;
+    background-color: #F1F4F5;
+    border-radius: 50%;
 }
+
 .select-img img {
     display: none;
+    border-radius: 50%;
 }
+
 .select-img img:first-child {
     display: inline-block;
 }
+
 .select-img:hover {
-    background-color: #e6e6e6;
+    background-color: #EBBAC2;
     opacity: 0.6;
 }
+
 .select-img.selected {
     background-color: #e6e6e6;
 }
+
 #kisekae-area img {
     position: absolute;
     top: 0;
@@ -57,6 +71,7 @@ image{
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
 }
+
 #kisekae-area img.base-img {
     position: relative !important;
     top: auto;
