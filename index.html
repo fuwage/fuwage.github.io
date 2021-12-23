@@ -1,145 +1,80 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-<head>
-    <link rel="stylesheet" href="main.css">
-    <script src="jquery-3.6.0.min.js"></script>
-
-</head>
-
-<body>
-
+  <body>
     <h1>鳥メーカー</h1>
 
-    <div id="kisekae-area">
+    <h2>ベース</h2>
+    <img v-on:click="base = 0" src="image/base_button/Cleam.png" />
+    <img v-on:click="base = 1" src="image/base_button/CobaltBlue.png" />
+    <img v-on:click="base = 2" src="image/base_button/DarkGreen.png" />
+    <img v-on:click="base = 3" src="image/base_button/Gray.png" />
+    <img v-on:click="base = 4" src="image/base_button/LightGreen.png" />
+    <img v-on:click="base = 5" src="image/base_button/Lilac.png" />
+    <img v-on:click="base = 6" src="image/base_button/OliveGreen.png" />
+    <img v-on:click="base = 7" src="image/base_button/SkyBlue.png" />
+    <img v-on:click="base = 8" src="image/base_button/Violet.png" />
+    <img v-on:click="base = 9" src="image/base_button/White.png" />
+    <img v-on:click="base = 10" src="image/base_button/Yellow.png" />
 
-        <img class="base-img" src="image/base/leg.png">
+    <h2>あたま</h2>
+    <img v-on:click="atama = 0" src="image/atama_button/White.png" />
+    <img v-on:click="atama = 1" src="image/atama_button/Yellow.png" />
 
-    </div>
+    <h2>おなか</h2>
+    <img v-on:click="onaka = 0" src="image/onaka_button/SkyBlue.png" />
+    <img v-on:click="onaka = 1" src="image/onaka_button/Green.png" />
 
+    <h2>目</h2>
+    <img v-on:click="eye = 0" src="image/eye_button/Eye.png" />
+    <img v-on:click="eye = 1" src="image/eye_button/EyeRed.png" />
+    <img v-on:click="eye = 2" src="image/eye_button/EyeWhite.png" />
 
+    <h2>鼻</h2>
+    <img v-on:click="nose = 0" src="image/nose_button/NoseBlue.png" />
+    <img v-on:click="nose = 1" src="image/nose_button/NosePink.png" />
+    <img v-on:click="nose = 2" src="image/nose_button/NoseWhite.png" />
 
-    <div id="select-img-area">
-        <!--        体-->
-        <h2>BODY</h2>
-        <p class="select-img">
-            <img src="image/base_button/Cleam.png">
-            <img src="image/base/Cleam.png">
-        </p>
-        <p class="select-img">
-            <img src="image/base_button/CobaltBlue.png">
-            <img src="image/base/CobaltBlue.png">
-        </p>
-        <p class="select-img">
-            <img src="image/base_button/DarkGreen.png">
-            <img src="image/base/DarkGreen.png">
-        </p>
-        <p class="select-img">
-            <img src="image/base_button/Gray.png">
-            <img src="image/base/Gray.png">
-        </p>
-        <p class="select-img">
-            <img src="image/base_button/LightGreen.png">
-            <img src="image/base/LightGreen.png">
-        </p>
-        <p class="select-img">
-            <img src="image/base_button/Lilac.png">
-            <img src="image/base/Lilac.png">
-        </p>
-        <p class="select-img">
-            <img src="image/base_button/OliveGreen.png">
-            <img src="image/base/OliveGreen.png">
-        </p>
-        <p class="select-img">
-            <img src="image/base_button/SkyBlue.png">
-            <img src="image/base/SkyBlue.png">
-        </p>
-        <p class="select-img">
-            <img src="image/base_button/Violet.png">
-            <img src="image/base/Violet.png">
-        </p>
-        <p class="select-img">
-            <img src="image/base_button/White.png">
-            <img src="image/base/White.png">
-        </p>
-        <p class="select-img">
-            <img src="image/base_button/Yellow.png">
-            <img src="image/base/Yellow.png">
-        </p>
+    <svg id="bird" viewBox="0 0 841.9 595.3">
+      <!-- 脚 -->
+      <image width="500" xlink:href="image/base/leg.png" />
 
-        <br>
-        <!--        頭-->
-        <h2>HEAD</h2>
-        <p class="select-img">
-            <img src="image/atama_button/White.png">
-            <img src="image/atama/White.png">
-        </p>
-        <p class="select-img">
-            <img src="image/atama_button/Yellow.png">
-            <img src="image/atama/Yellow.png">
-        </p>
+      <!-- ベース -->
+      <image v-if="base == 0" width="500" xlink:href="image/base/Cleam.png" />
+      <image v-if="base == 1" width="500" xlink:href="image/base/CobaltBlue.png" />
+      <image v-if="base == 2" width="500" xlink:href="image/base/DarkGreen.png" />
+      <image v-if="base == 3" width="500" xlink:href="image/base/Gray.png" />
+      <image v-if="base == 4" width="500" xlink:href="image/base/LightGreen.png" />
+      <image v-if="base == 5" width="500" xlink:href="image/base/Lilac.png" />
+      <image v-if="base == 6" width="500" xlink:href="image/base/OliveGreen.png" />
+      <image v-if="base == 7" width="500" xlink:href="image/base/SkyBlue.png" />
+      <image v-if="base == 8" width="500" xlink:href="image/base/Violet.png" />
+      <image v-if="base == 9" width="500" xlink:href="image/base/White.png" />
+      <image v-if="base == 10" width="500" xlink:href="image/base/Yellow.png" />
 
-        <!--        おなか-->
-        <h2>TUMMY</h2>
-        <p class="select-img">
-            <img src="image/onaka_button/Green.png">
-            <img src="image/onaka/Green.png">
-        </p>
-        <p class="select-img">
-            <img src="image/onaka_button/SkyBlue.png">
-            <img src="image/onaka/SkyBlue.png">
-        </p>
+      <!-- 頭 -->
+      <image v-if="atama == 0" width="500" xlink:href="image/atama/White.png" />
+      <image v-if="atama == 1" width="500" xlink:href="image/atama/Yellow.png" />
 
+      <!-- おなか -->
+      <image v-if="onaka == 0" width="500" xlink:href="image/onaka/SkyBlue.png" />
+      <image v-if="onaka == 1" width="500" xlink:href="image/onaka/Green.png" />
 
-        <!--        目-->
-        <h2>EYES</h2>
-        <p class="select-img">
-            <img src="image/eye_button/Eye.png">
-            <img src="image/eye/Eye.png">
-        </p>
-        <p class="select-img">
-            <img src="image/eye_button/EyeRed.png">
-            <img src="image/eye/EyeRed.png">
-        </p>
-        <p class="select-img">
-            <img src="image/eye_button/EyeWhite.png">
-            <img src="image/eye/EyeWhite.png">
-        </p>
+      <!-- 目 -->
+      <image v-if="eye == 0" width="500" xlink:href="image/eye/Eye.png" />
+      <image v-if="eye == 1" width="500" xlink:href="image/eye/EyeRed.png" />
+      <image v-if="eye == 2" width="500" xlink:href="image/eye/EyeWhite.png" />
 
+      <!-- 鼻 -->
+      <image v-if="nose == 0" width="500" xlink:href="image/nose/NoseBlue.png" />
+      <image v-if="nose == 1" width="500" xlink:href="image/nose/NosePink.png" />
+      <image v-if="nose == 2" width="500" xlink:href="image/nose/NoseWhite.png" />
+    </svg>
 
-        <!--        鼻-->
-        <h2>NOSE</h2>
-        <p class="select-img">
-            <img src="image/nose_button/NoseBlue.png">
-            <img src="image/nose/NoseBlue.png">
-        </p>
-        <p class="select-img">
-            <img src="image/nose_button/NosePink.png">
-            <img src="image/nose/NosePink.png">
-        </p>
-        <p class="select-img">
-            <img src="image/nose_button/NoseWhite.png">
-            <img src="image/nose/NoseWhite.png">
-        </p>
-
-
-
-    </div>
-
-
-
-    <!--    <svg id="bird" viewBox="0 0 841.9 595.3">-->
-    <!--
-        <image xlink:href="image/1.png" />
-        <image xlink:href="image/2.png" />
-        <image xlink:href="image/3.png" />
-        <image xlink:href="image/4.png" />
-        -->
-    <!--    </svg>-->
-
-    <button type="button" onclick="alert('hello!')">
-        <img src="image/white.png">
-    </button>
-
+    <script src="https://unpkg.com/petite-vue"></script>
     <script src="script.js"></script>
-</body></html>
+  </body>
+</html>
