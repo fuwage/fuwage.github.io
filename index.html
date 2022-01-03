@@ -1,80 +1,104 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="main.css" />
-  </head>
 
-  <body>
+<head>
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
     <h1>鳥メーカー</h1>
 
-    <h2>ベース</h2>
-    <img v-on:click="base = 0" src="image/base_button/Cleam.png" />
-    <img v-on:click="base = 1" src="image/base_button/CobaltBlue.png" />
-    <img v-on:click="base = 2" src="image/base_button/DarkGreen.png" />
-    <img v-on:click="base = 3" src="image/base_button/Gray.png" />
-    <img v-on:click="base = 4" src="image/base_button/LightGreen.png" />
-    <img v-on:click="base = 5" src="image/base_button/Lilac.png" />
-    <img v-on:click="base = 6" src="image/base_button/OliveGreen.png" />
-    <img v-on:click="base = 7" src="image/base_button/SkyBlue.png" />
-    <img v-on:click="base = 8" src="image/base_button/Violet.png" />
-    <img v-on:click="base = 9" src="image/base_button/White.png" />
-    <img v-on:click="base = 10" src="image/base_button/Yellow.png" />
 
-    <h2>あたま</h2>
-    <img v-on:click="atama = 0" src="image/atama_button/White.png" />
-    <img v-on:click="atama = 1" src="image/atama_button/Yellow.png" />
+    <svg id="bird" viewBox="0 0 500 350">
+        <!-- 脚 -->
+        <image width="500" xlink:href="image/base/leg.png" />
 
-    <h2>おなか</h2>
-    <img v-on:click="onaka = 0" src="image/onaka_button/SkyBlue.png" />
-    <img v-on:click="onaka = 1" src="image/onaka_button/Green.png" />
+        <!-- ベース -->
+        <image v-if="base == 0" width="500" xlink:href="image/base/Cleam.png" />
+        <image v-if="base == 1" width="500" xlink:href="image/base/CobaltBlue.png" />
+        <image v-if="base == 2" width="500" xlink:href="image/base/DarkGreen.png" />
+        <image v-if="base == 3" width="500" xlink:href="image/base/Gray.png" />
+        <image v-if="base == 4" width="500" xlink:href="image/base/LightGreen.png" />
+        <image v-if="base == 5" width="500" xlink:href="image/base/Lilac.png" />
+        <image v-if="base == 6" width="500" xlink:href="image/base/OliveGreen.png" />
+        <image v-if="base == 7" width="500" xlink:href="image/base/SkyBlue.png" />
+        <image v-if="base == 8" width="500" xlink:href="image/base/Violet.png" />
+        <image v-if="base == 9" width="500" xlink:href="image/base/White.png" />
+        <image v-if="base == 10" width="500" xlink:href="image/base/Yellow.png" />
 
-    <h2>目</h2>
-    <img v-on:click="eye = 0" src="image/eye_button/Eye.png" />
-    <img v-on:click="eye = 1" src="image/eye_button/EyeRed.png" />
-    <img v-on:click="eye = 2" src="image/eye_button/EyeWhite.png" />
+        <!-- 頭 -->
+        <image v-if="atama == 0" width="500" xlink:href="image/atama/White.png" />
+        <image v-if="atama == 1" width="500" xlink:href="image/atama/Yellow.png" />
 
-    <h2>鼻</h2>
-    <img v-on:click="nose = 0" src="image/nose_button/NoseBlue.png" />
-    <img v-on:click="nose = 1" src="image/nose_button/NosePink.png" />
-    <img v-on:click="nose = 2" src="image/nose_button/NoseWhite.png" />
+        <!-- おなか -->
+        <image v-if="onaka == 0" width="500" xlink:href="image/onaka/SkyBlue.png" />
+        <image v-if="onaka == 1" width="500" xlink:href="image/onaka/Green.png" />
+        <image v-if="onaka == 2" width="500" xlink:href="image/onaka/None.png" />
 
-    <svg id="bird" viewBox="0 0 841.9 595.3">
-      <!-- 脚 -->
-      <image width="500" xlink:href="image/base/leg.png" />
+        <!-- 目 -->
+        <image v-if="eye == 0" width="500" xlink:href="image/eye/Eye.png" />
+        <image v-if="eye == 1" width="500" xlink:href="image/eye/EyeRed.png" />
+        <image v-if="eye == 2" width="500" xlink:href="image/eye/EyeWhite.png" />
 
-      <!-- ベース -->
-      <image v-if="base == 0" width="500" xlink:href="image/base/Cleam.png" />
-      <image v-if="base == 1" width="500" xlink:href="image/base/CobaltBlue.png" />
-      <image v-if="base == 2" width="500" xlink:href="image/base/DarkGreen.png" />
-      <image v-if="base == 3" width="500" xlink:href="image/base/Gray.png" />
-      <image v-if="base == 4" width="500" xlink:href="image/base/LightGreen.png" />
-      <image v-if="base == 5" width="500" xlink:href="image/base/Lilac.png" />
-      <image v-if="base == 6" width="500" xlink:href="image/base/OliveGreen.png" />
-      <image v-if="base == 7" width="500" xlink:href="image/base/SkyBlue.png" />
-      <image v-if="base == 8" width="500" xlink:href="image/base/Violet.png" />
-      <image v-if="base == 9" width="500" xlink:href="image/base/White.png" />
-      <image v-if="base == 10" width="500" xlink:href="image/base/Yellow.png" />
-
-      <!-- 頭 -->
-      <image v-if="atama == 0" width="500" xlink:href="image/atama/White.png" />
-      <image v-if="atama == 1" width="500" xlink:href="image/atama/Yellow.png" />
-
-      <!-- おなか -->
-      <image v-if="onaka == 0" width="500" xlink:href="image/onaka/SkyBlue.png" />
-      <image v-if="onaka == 1" width="500" xlink:href="image/onaka/Green.png" />
-
-      <!-- 目 -->
-      <image v-if="eye == 0" width="500" xlink:href="image/eye/Eye.png" />
-      <image v-if="eye == 1" width="500" xlink:href="image/eye/EyeRed.png" />
-      <image v-if="eye == 2" width="500" xlink:href="image/eye/EyeWhite.png" />
-
-      <!-- 鼻 -->
-      <image v-if="nose == 0" width="500" xlink:href="image/nose/NoseBlue.png" />
-      <image v-if="nose == 1" width="500" xlink:href="image/nose/NosePink.png" />
-      <image v-if="nose == 2" width="500" xlink:href="image/nose/NoseWhite.png" />
+        <!-- 鼻 -->
+        <image v-if="nose == 0" width="500" xlink:href="image/nose/NoseBlue.png" />
+        <image v-if="nose == 1" width="500" xlink:href="image/nose/NosePink.png" />
+        <image v-if="nose == 2" width="500" xlink:href="image/nose/NoseWhite.png" />
     </svg>
+
+    <!-- ↓ボタン　↑表示画像     -->
+
+
+
+
+    <div class="box">
+
+
+        <h2>ベース</h2>
+        <img v-on:click="base = 0" src="image/base_button/Cleam.png" />
+        <img v-on:click="base = 1" src="image/base_button/CobaltBlue.png" />
+        <img v-on:click="base = 2" src="image/base_button/DarkGreen.png" />
+        <img v-on:click="base = 3" src="image/base_button/Gray.png" />
+        <img v-on:click="base = 4" src="image/base_button/LightGreen.png" />
+        <img v-on:click="base = 5" src="image/base_button/Lilac.png" />
+        <img v-on:click="base = 6" src="image/base_button/OliveGreen.png" />
+        <img v-on:click="base = 7" src="image/base_button/SkyBlue.png" />
+        <img v-on:click="base = 8" src="image/base_button/Violet.png" />
+        <img v-on:click="base = 9" src="image/base_button/White.png" />
+        <img v-on:click="base = 10" src="image/base_button/Yellow.png" />
+
+
+
+        <h2>あたま</h2>
+        <img v-on:click="atama = 0" src="image/atama_button/White.png" />
+        <img v-on:click="atama = 1" src="image/atama_button/Yellow.png" />
+
+
+        <h2>おなか</h2>
+        <img v-on:click="onaka = 0" src="image/onaka_button/SkyBlue.png" />
+        <img v-on:click="onaka = 1" src="image/onaka_button/Green.png" />
+         <img v-on:click="onaka = 2" src="image/onaka_button/None.png" />
+
+
+
+        <h2>目</h2>
+        <img v-on:click="eye = 0" src="image/eye_button/Eye.png" />
+        <img v-on:click="eye = 1" src="image/eye_button/EyeRed.png" />
+        <img v-on:click="eye = 2" src="image/eye_button/EyeWhite.png" />
+
+
+
+        <h2>鼻</h2>
+        <img v-on:click="nose = 0" src="image/nose_button/NoseBlue.png" />
+        <img v-on:click="nose = 1" src="image/nose_button/NosePink.png" />
+        <img v-on:click="nose = 2" src="image/nose_button/NoseWhite.png" />
+
+
+    </div>
+
+
+
 
     <script src="https://unpkg.com/petite-vue"></script>
     <script src="script.js"></script>
-  </body>
-</html>
+</body></html>

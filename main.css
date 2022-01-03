@@ -6,72 +6,40 @@
 　きみどり　#83C677*/
 
 * {
-  background-color: #f1f4f5;
+    width: 700px;
+    background-color: #f1f4f5;
+    text-align: center;
+}
+
+.box {
+    height: 500px;
+    /* 横幅を200pxに指定 */
+    border: 1px solid #000;
+    /* わかりやすくボーダーを引く */
+    overflow-y: scroll;
+    /* 縦方向にスクロール可能にする */
 }
 
 h1 {
-  text-align: center;
-  color: #b5343b;
+    text-align: center;
+    color: #b5343b;
 }
 
-#kisekae-area {
-  border: solid;
-  margin-bottom: 10px;
-  text-align: center;
-  position: relative;
+div img {
+    width: 75px;
+    border: solid 5px white;
+    border-radius: 50%;
 }
 
-#select-img-area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  text-align: center;
-  position: relative;
-  display: flex;
+div img:hover {
+    opacity: 0.75;
 }
 
-.select-img {
-  border: solid 10px #f1f4f5;
-  text-align: center;
-  padding: 10px;
-  width: 20%;
-  margin-right: 5px;
-  cursor: pointer;
-  background-color: #f1f4f5;
-  border-radius: 50%;
-}
-
-.select-img img {
-  display: none;
-  border-radius: 50%;
-}
-
-.select-img img:first-child {
-  display: inline-block;
-}
-
-.select-img:hover {
-  background-color: #ebbac2;
-  opacity: 0.6;
-}
-
-.select-img.selected {
-  background-color: #e6e6e6;
-}
-
-#kisekae-area img {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-}
-
-#kisekae-area img.base-img {
-  position: relative !important;
-  top: auto;
-  left: auto;
-  transform: none;
-  -webkit-transform: none;
-  -ms-transform: none;
+svg {
+    float: both;
+    width: 500px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  
 }
