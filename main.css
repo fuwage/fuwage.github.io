@@ -1,28 +1,51 @@
-/*あか　#B5343B
-  ピンク　#EBBAC2
-  しろ　#F1F4F5
-　むらさき　#5B508E
-　みどり　#3C7359
-　きみどり　#83C677*/
+/*#F7F0F5
+#4C4C6E
+#1DB096
+#D2DE62
+*/
 
 * {
-    width: 700px;
-    background-color: #f1f4f5;
+    background-color: #f7f0f5;
     text-align: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .box {
-    height: 500px;
-    /* 横幅を200pxに指定 */
-    border: 1px solid #000;
-    /* わかりやすくボーダーを引く */
+    width: 700px;
+    height: 700px;
+    float: right;
     overflow-y: scroll;
-    /* 縦方向にスクロール可能にする */
+    border: solid 5px #4c4c6e;
+    border-radius: 2em;
+}
+
+#box::-webkit-scrollbar {
+    width: 20px;
+    background: #E4E4EC;
+    border-radius: 20px;
+}
+
+#box::-webkit-scrollbar-thumb {
+  background: #4c4c6e;
+    border-radius: 20px;
 }
 
 h1 {
+    width: 200px;
+    height: 200px;
+    color: #f7f0f5;
+    background-color: #4c4c6e;
+    border-radius: 50%;
+    margin: 0 auto;
     text-align: center;
-    color: #b5343b;
+    line-height: 200px;
+
+}
+
+h2 {
+    text-align: center;
+    color: #4c4c6e;
 }
 
 div img {
@@ -35,11 +58,15 @@ div img:hover {
     opacity: 0.75;
 }
 
+div img:active {
+    border: solid 5px #B5343B;
+}
+
 svg {
-    float: both;
-    width: 500px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  
+    float: left;
+    background-color: white;
+    width: 800px;
+    height: 703px;
+    border: double 20px #4c4c6e;
+    border-radius: 5%;
 }
